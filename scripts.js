@@ -633,6 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 });
 
+
 // ===== Console Easter Egg =====
 console.log('%c🔒 Security Notice', 'color: #00ff88; font-size: 20px; font-weight: bold;');
 console.log('%cThis portfolio was built with ❤️ by Ajinkya Bhosale', 'color: #94a3b8; font-size: 14px;');

@@ -976,7 +976,14 @@ section {
 }
 
 .project-footer {
-    margin-top: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.project-footer a {
+    position: relative;
+    z-index: 11;
+    pointer-events: auto !important;
 }
 
 .btn-link {
