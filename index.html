@@ -4,62 +4,76 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My New Website</title>
-    <style>
-        :root {
-            --bg: #f7fafc;
-            --accent: #2563eb;
-            --text: #0f172a;
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card {
-            max-width: 720px;
-            padding: 2rem;
-            text-align: center;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
-        }
-
-        h1 {
-            color: var(--accent);
-            margin: 0 0 0.5rem;
-            font-size: clamp(1.5rem, 4vw, 2.25rem);
-        }
-
-        p {
-            margin: 0 0 1rem;
-        }
-
-        a.button {
-            display: inline-block;
-            padding: 0.6rem 1rem;
-            background: var(--accent);
-            color: #fff;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-    </style>
+    <title>Your Name — Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <main class="card" role="main">
-        <h1>Welcome to my new website</h1>
-        <p>Simple starter page — customize it however you like.</p>
-        <a class="button" href="#" aria-label="Learn more about this site">Learn more</a>
+    <header class="nav">
+        <nav>
+            <a class="brand" href="#">YourName</a>
+            <button class="nav-toggle" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1>Hi — I'm Your Name</h1>
+            <p>Frontend dev • JavaScript • UI/UX</p>
+            <a class="btn" href="#projects">See my work</a>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About</h2>
+            <p>Short intro: who you are, what you build, and what you're looking for.</p>
+        </section>
+
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3>Project One</h3>
+                    <p>Short description.</p>
+                    <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                    <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
+                </article>
+                <article class="card">
+                    <h3>Project Two</h3>
+                    <p>Short description.</p>
+                    <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                    <a class="btn small ghost" href="#" target="_blank" rel="noopener">Code</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <p>JavaScript • HTML • CSS • React • Node.js</p>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <label>Name <input name="name" required></label>
+                <label>Email <input name="email" type="email" required></label>
+                <label>Message <textarea name="message" rows="5" required></textarea></label>
+                <button type="submit" class="btn">Send</button>
+                <p id="formMsg" class="muted"></p>
+            </form>
+        </section>
     </main>
+
+    <footer class="container muted">
+        <p>© <span id="year"></span> Your Name • Built with ♥</p>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>

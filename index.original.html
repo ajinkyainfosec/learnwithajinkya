@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My New Website</title>
+    <style>
+        :root {
+            --bg: #f7fafc;
+            --accent: #2563eb;
+            --text: #0f172a;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            max-width: 720px;
+            padding: 2rem;
+            text-align: center;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(2, 6, 23, 0.06);
+        }
+
+        h1 {
+            color: var(--accent);
+            margin: 0 0 0.5rem;
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+        }
+
+        p {
+            margin: 0 0 1rem;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 0.6rem 1rem;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card" role="main">
+        <h1>Welcome to my new website</h1>
+        <p>Simple starter page — customize it however you like.</p>
+        <a class="button" href="#" aria-label="Learn more about this site">Learn more</a>
+    </main>
+</body>
+
+</html>
