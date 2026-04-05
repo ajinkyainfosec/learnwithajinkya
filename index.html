@@ -2,329 +2,558 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajinkya Bhosale - Cybersecurity & Development Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajinkya Bhosale — Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;600&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Animated Background -->
-    <div class="matrix-bg" id="matrixBg"></div>
 
-    <!-- Navigation -->
-    <nav class="nav" id="mainNav">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="terminal-prompt">root@ajinkya:~$</span>
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link" data-section="home">Home</a>
-                <a href="#about" class="nav-link" data-section="about">About</a>
-                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-            </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+    <header class="nav-header">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">[</span>AB<span class="logo-bracket">]</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#ctf">CTF</a>
+                <a href="#certifications">Certs</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <!-- ═══════════════════════════════════ HERO ══════════════════════════════════ -->
+    <section class="hero" id="home">
+        <div class="hero-bg-grid"></div>
         <div class="hero-content">
-            <div class="glitch-wrapper">
-                <h1 class="hero-title glitch" data-text="AJINKYA BHOSALE">AJINKYA BHOSALE</h1>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Entry-Level Roles
             </div>
-            <div class="hero-subtitle-wrapper">
-                <p class="hero-subtitle">
-                    <span class="typing-text" id="typingText"></span>
-                    <span class="cursor">|</span>
-                </p>
+            <h1 class="hero-name">Ajinkya<br /><span class="name-accent">Bhosale</span></h1>
+            <p class="hero-role">
+                <span class="role-prefix">~/</span>
+                <span class="role-text" id="typedRole"></span>
+                <span class="cursor">_</span>
+            </p>
+            <p class="hero-tagline">
+                Building detection systems, hunting threats, and securing infrastructure —<br class="hide-sm" />
+                one log at a time.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="ajinkya-resume.docx" download class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download Resume
+                </a>
             </div>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View Projects</span>
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
+            <div class="hero-links">
+                <a href="https://github.com/ajinkyainfosec" target="_blank" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                     </svg>
                 </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Get In Touch</span>
+                <a href="https://www.linkedin.com/in/ajinkya--bhosale" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+                <a href="https://tryhackme.com/aj1nky0" target="_blank" aria-label="TryHackMe">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M10.705 0C8.465 0 6.545 1.61 6.13 3.81A4.006 4.006 0 003 7.705c0 2.21 1.79 4 4 4h.115L4.42 13.4a1.201 1.201 0 101.696 1.697l2.69-2.69v.298c0 2.21 1.79 4 4 4a4.005 4.005 0 003.895-3.13A3.973 3.973 0 0019.595 10h.406a4 4 0 100-8 3.97 3.97 0 00-1.596.33A4.496 4.496 0 0014.5 0h-.25c-.555 0-1.09.1-1.59.275A4.449 4.449 0 0010.704 0z" />
+                    </svg>
                 </a>
             </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="8.07">8.07</span>
-                    <span class="stat-label">CGPA</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="5">3</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="10">10</span>
-                    <span class="stat-label">Certifications</span>
-                </div>
-            </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
+        <div class="hero-terminal">
+            <div class="terminal-bar">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+                <span class="t-title">threat-hunt.sh</span>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+                <div class="t-line t-out">ajinkya_bhosale</div>
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat role.txt</span></div>
+                <div class="t-line t-out">SOC Analyst | Security Engineer</div>
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">ls ./skills/</span></div>
+                <div class="t-line t-out">SIEM HIDS Threat-Detection Python Linux</div>
+                <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat ./status.txt</span></div>
+                <div class="t-line t-green">✓ Available for entry-level roles</div>
+                <div class="t-line blink-line"><span class="t-prompt">$</span> <span class="cursor-terminal">█</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- ═══════════════════════════════════ ABOUT ═════════════════════════════════ -->
+    <section class="section" id="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;about&gt;</span>
-                <h2 class="section-title">Who Am I?</h2>
-            </div>
-            <div class="about-content">
+            <div class="section-label">01 / About</div>
+            <h2 class="section-title">Who I Am</h2>
+            <div class="about-grid">
                 <div class="about-text">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
-                            <span class="terminal-title">about_ajinkya.sh</span>
-                        </div>
-                        <div class="terminal-body">
-                            <p class="terminal-line"><span class="prompt">$</span> cat introduction.txt</p>
-                            <p class="terminal-output">
-                                B.E. Computer Science & Engineering student at Sinhgad Institute of Technology & Science
-                                with a passion for cybersecurity and software development.
-                            </p>
-                            <p class="terminal-line"><span class="prompt">$</span> cat mission.txt</p>
-                            <p class="terminal-output">
-                                Specializing in penetration testing, SIEM implementation, and building secure
-                                applications. Experienced with Wazuh, Burp Suite, Metasploit, and developing custom
-                                security tools.
-                            </p>
-                            <p class="terminal-line"><span class="prompt">$</span> cat focus.txt</p>
-                            <p class="terminal-output">
-                                Currently focusing on: Network Security, Web Application Security, OSINT, Threat
-                                Detection, and Full-Stack Development with cybersecurity integration.
-                            </p>
-                            <p class="terminal-line"><span class="prompt cursor-blink">█</span></p>
-                        </div>
+                    <p>
+                        I'm a <strong>final-year Computer Engineering student</strong> from Pune, India, with a focused
+                        interest in
+                        cybersecurity — specifically in <strong>Blue Team operations, SOC analysis, and threat detection
+                            engineering</strong>.
+                    </p>
+                    <p>
+                        Over the past year, I've moved beyond textbooks: I've built a full-stack <strong>Host-Based
+                            Intrusion
+                            Detection System</strong> in Rust and Python, deployed a <strong>Wazuh SIEM home
+                            lab</strong>, and
+                        developed a <strong>Python honeypot</strong> to study real attacker behavior. Each project
+                        taught me how
+                        defenders think — and what attackers exploit.
+                    </p>
+                    <p>
+                        I'm an active learner on <strong>TryHackMe</strong>, having completed labs in web exploitation,
+                        privilege
+                        escalation, and blue team fundamentals. I believe in learning by doing — not just reading
+                        theory.
+                    </p>
+                    <p>
+                        Currently preparing for the <strong>ISC2 CC certification</strong> and seeking an entry-level
+                        role where I
+                        can contribute to a real SOC or security engineering team.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">Blue Team</span>
+                        <span class="tag">SOC Operations</span>
+                        <span class="tag">Threat Detection</span>
+                        <span class="tag">SIEM</span>
+                        <span class="tag">Log Analysis</span>
+                        <span class="tag">MITRE ATT&amp;CK</span>
                     </div>
-
-                    <div class="education-grid">
-                        <div class="education-card">
-                            <div class="education-icon">🎓</div>
-                            <h4>B.E. Computer Science</h4>
-                            <p>Sinhgad Institute of Technology & Science</p>
-                            <span class="education-year">2023 - Present</span>
-                            <span class="education-cgpa">CGPA: 8.07</span>
-                        </div>
-                        <div class="education-card">
-                            <div class="education-icon">📚</div>
-                            <h4>Diploma in Computer Engineering</h4>
-                            <p>Zeal Polytechnic College</p>
-                            <span class="education-year">2020 - 2023</span>
-                            <span class="education-cgpa">86.69%</span>
-                        </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Hands-on Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">SIGMA Detection Rules</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">MITRE ATT&amp;CK Tactics</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Attack Detection Rate</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- ═══════════════════════════════════ SKILLS ════════════════════════════════ -->
+    <section class="section section-alt" id="skills">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;skills&gt;</span>
-                <h2 class="section-title">Technical Arsenal</h2>
-            </div>
+            <div class="section-label">02 / Skills</div>
+            <h2 class="section-title">Technical Toolkit</h2>
             <div class="skills-grid">
-                <!-- Cybersecurity -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <rect x="5" y="11" width="14" height="10" rx="2" />
-                            <path d="M12 11V7a3 3 0 0 1 6 0v4M8 7a3 3 0 0 1 6 0v4" />
-                        </svg>
-                        <h3>Cybersecurity</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">Kali Linux</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Burp Suite</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Metasploit</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Nmap</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Wazuh SIEM</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Wireshark</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Programming -->
                 <div class="skill-category">
-                    <div class="category-header">
-                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <polyline points="16 18 22 12 16 6" />
                             <polyline points="8 6 2 12 8 18" />
                         </svg>
-                        <h3>Programming</h3>
                     </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">C++</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">PHP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
+                    <h3>Programming</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Python</span>
+                        <span class="pill">Bash</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Rust</span>
+                        <span class="pill">HTML/CSS</span>
                     </div>
                 </div>
 
-                <!-- Web Development -->
                 <div class="skill-category">
-                    <div class="category-header">
-                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Security Tools</h3>
+                    <div class="skill-pills">
+                        <span class="pill highlight">Wazuh SIEM</span>
+                        <span class="pill highlight">Wireshark</span>
+                        <span class="pill highlight">Burp Suite</span>
+                        <span class="pill highlight">Nmap</span>
+                        <span class="pill highlight">Metasploit</span>
+                        <span class="pill highlight">IBM QRadar</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="2" y="3" width="20" height="14" rx="2" />
                             <line x1="8" y1="21" x2="16" y2="21" />
                             <line x1="12" y1="17" x2="12" y2="21" />
                         </svg>
-                        <h3>Web Development</h3>
                     </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">HTML5 & CSS3</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">React.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Flask</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Bootstrap</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Tailwind CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
-                            </div>
-                        </div>
+                    <h3>Systems</h3>
+                    <div class="skill-pills">
+                        <span class="pill">Linux (Ubuntu/CentOS)</span>
+                        <span class="pill">Windows</span>
+                        <span class="pill">Docker</span>
+                        <span class="pill">VirtualBox/VMware</span>
                     </div>
                 </div>
 
-                <!-- Database & Tools -->
                 <div class="skill-category">
-                    <div class="category-header">
-                        <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <ellipse cx="12" cy="5" rx="9" ry="3" />
                             <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
                             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
                         </svg>
-                        <h3>Database & Tools</h3>
                     </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">MySQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
+                    <h3>Databases</h3>
+                    <div class="skill-pills">
+                        <span class="pill">PostgreSQL</span>
+                        <span class="pill">MySQL</span>
+                        <span class="pill">MongoDB</span>
+                        <span class="pill">SQLite</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="2" />
+                            <path
+                                d="M16.24 7.76a6 6 0 010 8.49m-8.48-.01a6 6 0 010-8.49m11.31-2.82a10 10 0 010 14.14m-14.14 0a10 10 0 010-14.14" />
+                        </svg>
+                    </div>
+                    <h3>Concepts</h3>
+                    <div class="skill-pills">
+                        <span class="pill">TCP/IP Networking</span>
+                        <span class="pill">SIEM & Log Analysis</span>
+                        <span class="pill">Threat Detection</span>
+                        <span class="pill">MITRE ATT&amp;CK</span>
+                        <span class="pill">Incident Response</span>
+                        <span class="pill">Vulnerability Assessment</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="8" rx="2" />
+                            <rect x="2" y="14" width="20" height="8" rx="2" />
+                            <line x1="6" y1="6" x2="6.01" y2="6" />
+                            <line x1="6" y1="18" x2="6.01" y2="18" />
+                        </svg>
+                    </div>
+                    <h3>Frameworks & Cloud</h3>
+                    <div class="skill-pills">
+                        <span class="pill">FastAPI / Flask</span>
+                        <span class="pill">REST API</span>
+                        <span class="pill">Azure Fundamentals</span>
+                        <span class="pill">Git</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ PROJECTS ══════════════════════════════ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-label">03 / Projects</div>
+            <h2 class="section-title">What I've Built</h2>
+            <div class="projects-list">
+
+                <!-- Project 1 -->
+                <article class="project-card featured">
+                    <div class="project-meta">
+                        <span class="project-number">01</span>
+                        <span class="project-badge">Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Host-Based Intrusion Detection System (HIDS)</h3>
+                        <p class="project-desc">
+                            A full-stack intrusion detection system built from scratch. The Rust agent monitors file
+                            integrity,
+                            detects brute-force attempts, and flags suspicious processes in real-time using Linux
+                            <code>inotify</code>
+                            — achieving sub-1-second detection latency. A Sigma-based detection engine maps threats to
+                            MITRE ATT&CK
+                            tactics, and a WebSocket dashboard provides live alert triage.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Real-time inotify monitoring: latency reduced from 30s → &lt;1s
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                17 Sigma rules mapped to 8 MITRE ATT&CK tactics
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                80% detection rate across 10 simulated attack scenarios
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Multi-host monitoring via centralized server
                             </div>
                         </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">MongoDB</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
+                        <div class="project-footer">
+                            <div class="project-stack">
+                                <span class="stack-tag">Rust</span>
+                                <span class="stack-tag">FastAPI</span>
+                                <span class="stack-tag">PostgreSQL</span>
+                                <span class="stack-tag">Docker</span>
+                                <span class="stack-tag">WebSockets</span>
+                                <span class="stack-tag">MITRE ATT&CK</span>
+                            </div>
+                            <a href="https://github.com/ajinkyainfosec/Host-based-intrusion-detection" target="_blank"
+                                class="project-link">
+                                View on GitHub
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7" />
+                                    <polyline points="7 7 17 7 17 17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span class="project-number">02</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Wazuh SIEM Home Lab</h3>
+                        <p class="project-desc">
+                            Built a full SIEM environment using Wazuh on Linux to simulate real SOC workflows.
+                            Configured agents
+                            across multiple endpoints to collect and forward system logs, monitor file integrity, and
+                            track
+                            authentication events — all centralized in a single dashboard for proactive threat hunting.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Configured log collection, alert correlation, and vulnerability detection
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Monitored FIM, auth events, and system modifications across endpoints
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Hands-on experience with SIEM dashboards, alert tuning, and threat analysis
                             </div>
                         </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">Firebase</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
+                        <div class="project-footer">
+                            <div class="project-stack">
+                                <span class="stack-tag">Wazuh</span>
+                                <span class="stack-tag">Linux</span>
+                                <span class="stack-tag">SIEM</span>
+                                <span class="stack-tag">Log Analysis</span>
+                                <span class="stack-tag">FIM</span>
+                            </div>
+                            <span class="project-link-disabled">Home Lab Project</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-meta">
+                        <span class="project-number">03</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Python-Based Honeypot System</h3>
+                        <p class="project-desc">
+                            A lightweight honeypot that simulates SSH, FTP, HTTP, and HTTPS services to attract and
+                            analyze attacker
+                            behavior. Uses Python's multithreading to handle concurrent connections, capturing attacker
+                            IPs, request
+                            patterns, and intrusion signatures for threat intelligence analysis.
+                        </p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Simulates 4 common services to capture real attacker interactions
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Logs structured threat data in JSON/CSV for analysis
+                            </div>
+                            <div class="highlight-item">
+                                <span class="hi-dot"></span>
+                                Concurrent port monitoring via multithreading
                             </div>
                         </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Git & GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
+                        <div class="project-footer">
+                            <div class="project-stack">
+                                <span class="stack-tag">Python</span>
+                                <span class="stack-tag">Multithreading</span>
+                                <span class="stack-tag">Networking</span>
+                                <span class="stack-tag">Threat Intel</span>
+                            </div>
+                            <a href="https://github.com/ajinkyainfosec/basic-honeypot" target="_blank"
+                                class="project-link">
+                                View on GitHub
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="7" y1="17" x2="17" y2="7" />
+                                    <polyline points="7 7 17 7 17 17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CTF ═══════════════════════════════════ -->
+    <section class="section section-alt" id="ctf">
+        <div class="container">
+            <div class="section-label">04 / CTF & Practice</div>
+            <h2 class="section-title">Labs & Competitions</h2>
+            <div class="ctf-grid">
+                <div class="ctf-main">
+                    <div class="ctf-platform">
+                        <div class="platform-header">
+                            <div class="platform-icon thm">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path
+                                        d="M10.705 0C8.465 0 6.545 1.61 6.13 3.81A4.006 4.006 0 003 7.705c0 2.21 1.79 4 4 4h.115L4.42 13.4a1.201 1.201 0 101.696 1.697l2.69-2.69v.298c0 2.21 1.79 4 4 4a4.005 4.005 0 003.895-3.13A3.973 3.973 0 0019.595 10h.406a4 4 0 100-8 3.97 3.97 0 00-1.596.33A4.496 4.496 0 0014.5 0h-.25c-.555 0-1.09.1-1.59.275A4.449 4.449 0 0010.704 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3>TryHackMe</h3>
+                                <p class="platform-sub">Active practitioner — hands-on cybersecurity labs</p>
+                            </div>
+                            <a href="https://tryhackme.com/p/aj1nky0" target="_blank" class="btn btn-sm">View
+                                Profile</a>
+                        </div>
+                        <p class="ctf-desc">
+                            Regularly completing rooms and learning paths on TryHackMe to build practical,
+                            scenario-based
+                            cybersecurity skills. My focus has been on Blue Team operations, detection engineering, and
+                            foundational
+                            offensive knowledge to better understand attacker methodologies.
+                        </p>
+                    </div>
+                    <div class="ctf-areas">
+                        <h4>Areas Practiced</h4>
+                        <div class="ctf-area-grid">
+                            <div class="ctf-area-item">
+                                <div class="area-icon">🔐</div>
+                                <div class="area-name">Web Exploitation</div>
+                                <div class="area-desc">XSS, SQLi, IDOR, broken auth</div>
+                            </div>
+                            <div class="ctf-area-item">
+                                <div class="area-icon">🌐</div>
+                                <div class="area-name">Network Security</div>
+                                <div class="area-desc">Packet analysis, network recon, protocol attacks</div>
+                            </div>
+                            <div class="ctf-area-item">
+                                <div class="area-icon">⬆️</div>
+                                <div class="area-name">Privilege Escalation</div>
+                                <div class="area-desc">Linux/Windows privesc techniques</div>
+                            </div>
+                            <div class="ctf-area-item">
+                                <div class="area-icon">🛡️</div>
+                                <div class="area-name">Blue Team Fundamentals</div>
+                                <div class="area-desc">Log analysis, SIEM, incident detection</div>
+                            </div>
+                            <div class="ctf-area-item">
+                                <div class="area-icon">🔎</div>
+                                <div class="area-name">OSINT</div>
+                                <div class="area-desc">Open-source intelligence gathering</div>
+                            </div>
+                            <div class="ctf-area-item">
+                                <div class="area-icon">💻</div>
+                                <div class="area-name">Linux Fundamentals</div>
+                                <div class="area-desc">Shell, file system, permissions</div>
                             </div>
                         </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">Power BI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress"></div>
+                    </div>
+                </div>
+                <div class="ctf-sidebar">
+                    <div class="ctf-approach">
+                        <h4>My Approach</h4>
+                        <div class="approach-item">
+                            <span class="approach-num">01</span>
+                            <div>
+                                <strong>Learn the attack</strong>
+                                <p>Understand how vulnerabilities are exploited</p>
                             </div>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-num">02</span>
+                            <div>
+                                <strong>Think like a defender</strong>
+                                <p>Identify detection opportunities and log signatures</p>
+                            </div>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-num">03</span>
+                            <div>
+                                <strong>Build detection rules</strong>
+                                <p>Translate knowledge into Sigma/detection logic</p>
+                            </div>
+                        </div>
+                        <div class="approach-item">
+                            <span class="approach-num">04</span>
+                            <div>
+                                <strong>Document findings</strong>
+                                <p>Write clear, analyst-grade observations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctf-internship">
+                        <h4>Internship</h4>
+                        <div class="internship-card">
+                            <div class="internship-org">CSRBOX Foundation</div>
+                            <div class="internship-role">Cybersecurity Training</div>
+                            <div class="internship-date">Oct 2024 · 2 weeks</div>
+                            <ul class="internship-list">
+                                <li>Cyber threats &amp; ethical hacking basics</li>
+                                <li>OSINT tools &amp; vulnerability assessment</li>
+                                <li>Real-time threat monitoring with IBM QRadar SIEM</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -332,332 +561,207 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- ═══════════════════════════════════ CERTS ═════════════════════════════════ -->
+    <section class="section" id="certifications">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;projects&gt;</span>
-                <h2 class="section-title">Featured Work</h2>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1: HIDS -->
-                <div class="project-card" data-project="1">
-                    <div class="project-header">
-                        <div class="project-number">01</div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">Security</span>
-                            <span class="tag">Monitoring</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Host-Based Intrusion Detection System</h3>
-                    <p class="project-description">
-                        Host-Based Intrusion Detection System with real-time threat monitoring, MITRE ATT&CK mapping,
-                        and role-based access control. Features automated anomaly detection, event correlation engine,
-                        and comprehensive SOC dashboard for enterprise security teams
-                    </p>
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Real-time process monitoring</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>SHA-256 file integrity checks</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Automated email alerts via Gmail API</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Web dashboard for visualization</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <button class="btn-link demo-btn" data-project="hids">
-                            <span>View Demo</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </button>
+            <div class="section-label">05 / Certifications</div>
+            <h2 class="section-title">Credentials</h2>
+            <div class="certs-grid">
+
+                <div class="cert-card cert-featured">
+                    <div class="cert-issuer-logo isc2">ISC²</div>
+                    <div class="cert-info">
+                        <div class="cert-status in-progress">Training Completed</div>
+                        <h3>Certified in Cybersecurity (CC)</h3>
+                        <p>ISC2 entry-level certification covering security concepts, network security, access controls,
+                            and
+                            incident response fundamentals.</p>
                     </div>
                 </div>
 
-                <!-- Project 2: Honeypot -->
-                <!-- Project 2: Honeypot -->
-                <div class="project-card" data-project="2">
-                    <div class="project-header">
-                        <div class="project-number">02</div>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Networking</span>
-                            <span class="tag">OSINT</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Python-Based Honeypot</h3>
-                    <p class="project-description">
-                        Built a lightweight honeypot to simulate common ports (SSH, FTP, HTTP, HTTPS) and capture
-                        attacker behavior for intrusion pattern analysis.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Multi-port simulation with threading</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>IP & behavior tracking</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Structured logging (JSON/CSV)</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Real server response mimicry</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <button class="btn-link demo-btn" data-project="honeypot">
-                            <span>View Demo</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                        <a href="https://github.com/Ajinkyainfosec/basic-honeypot" target="_blank" class="btn-link">
-                            <span>View Code</span>
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
-                            </svg>
-                        </a>
+                <div class="cert-card">
+                    <div class="cert-issuer-logo google">G</div>
+                    <div class="cert-info">
+                        <div class="cert-status earned">Earned</div>
+                        <h3>Foundations of Cybersecurity</h3>
+                        <p>Cyber-attacks, Information Assurance, Security Controls and frameworks.</p>
                     </div>
                 </div>
 
-                <!-- Project 3: Wazuh SIEM -->
-                <div class="project-card" data-project="3">
-                    <div class="project-header">
-                        <div class="project-number">03</div>
-                        <div class="project-tags">
-                            <span class="tag">Linux</span>
-                            <span class="tag">SIEM</span>
-                            <span class="tag">Monitoring</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Wazuh SIEM & Vulnerability Monitoring</h3>
-                    <p class="project-description">
-                        Configured Wazuh on Linux for comprehensive log collection, vulnerability detection, and
-                        real-time security alert monitoring.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>File integrity monitoring</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Authentication event tracking</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>System change detection</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Real-time security alerts</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <button class="btn-link demo-btn" data-project="wazuh">
-                            <span>View Demo</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </button>
+                <div class="cert-card">
+                    <div class="cert-issuer-logo ms">Az</div>
+                    <div class="cert-info">
+                        <div class="cert-status earned">Earned</div>
+                        <h3>Microsoft Azure Fundamentals</h3>
+                        <p>Cloud models, principles, Azure Core Services, and Networking concepts.</p>
                     </div>
                 </div>
 
-                <!-- Project 4: Food Delivery App -->
-                <!-- <div class="project-card" data-project="4">
-                    <div class="project-header">
-                        <div class="project-number">04</div>
-                        <div class="project-tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">Android</span>
-                            <span class="tag">Firebase</span>
-                        </div>
+                <div class="cert-card">
+                    <div class="cert-issuer-logo py">Py</div>
+                    <div class="cert-info">
+                        <div class="cert-status earned">Earned</div>
+                        <h3>Programming with Python</h3>
+                        <p>Syntax, data types, control flow, functions, and scripting fundamentals.</p>
                     </div>
-                    <h3 class="project-title">Android Food Delivery App</h3>
-                    <p class="project-description">
-                        Developed an Android application using Java and XML with Firebase backend for user
-                        authentication and real-time order tracking.
-                    </p>
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>User authentication system</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Real-time order tracking</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Firebase Realtime Database</span>
-                        </div>
-                        <div class="feature-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                            <span>Intuitive UI/UX design</span>
-                        </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-issuer-logo net">Net</div>
+                    <div class="cert-info">
+                        <div class="cert-status earned">Earned</div>
+                        <h3>Demystifying Networks</h3>
+                        <p>OSI &amp; TCP/IP models, protocols, IP addressing, and socket programming.</p>
                     </div>
-                    <div class="project-footer">
-                        <button class="btn-link demo-btn" data-project="food-app">
-                            <span>View Demo</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    </div>
-                </div> -->
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- ═══════════════════════════════════ EDUCATION ════════════════════════════ -->
+    <section class="section section-alt" id="education">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;contact&gt;</span>
-                <h2 class="section-title">Let's Connect</h2>
+            <div class="section-label">06 / Education</div>
+            <h2 class="section-title">Academic Background</h2>
+            <div class="edu-timeline">
+                <div class="edu-card current">
+                    <div class="edu-dot"></div>
+                    <div class="edu-content">
+                        <div class="edu-year">Aug 2023 – Present</div>
+                        <h3>B.E. in Computer Science &amp; Engineering</h3>
+                        <div class="edu-inst">Sinhgad Institute of Technology and Science, Pune</div>
+                        <div class="edu-grade">
+                            <span class="grade-label">CGPA</span>
+                            <span class="grade-val">8.02 / 10</span>
+                        </div>
+                        <div class="edu-focus">Focus: Cybersecurity, Networks, Systems Programming</div>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-content">
+                        <div class="edu-year">Aug 2020 – 2023</div>
+                        <h3>Diploma in Computer Engineering</h3>
+                        <div class="edu-inst">Zeal Polytechnic College, Pune</div>
+                        <div class="edu-grade">
+                            <span class="grade-label">Percentage</span>
+                            <span class="grade-val">86.69%</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CONTACT ══════════════════════════════ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-label">07 / Contact</div>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <p>
+                        I'm currently looking for <strong>entry-level SOC Analyst</strong> or <strong>Security
+                            Engineer</strong>
+                        roles. If you're hiring or want to discuss cybersecurity, feel free to reach out.
+                    </p>
+                    <p>I typically respond within 24 hours.</p>
+                    <a href="ajinkya-resume.docx" download class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:bhosaleajinkya2205@gmail.com" class="contact-item">
                         <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                                 <polyline points="22,6 12,13 2,6" />
                             </svg>
                         </div>
-                        <h4>Email</h4>
-                        <a href="mailto:bhosaleajinkya2205@gmail.com">bhosaleajinkya2205@gmail.com</a>
-                    </div>
-
-                    <div class="contact-card">
+                        <div class="contact-detail">
+                            <span class="contact-type">Email</span>
+                            <span class="contact-val">bhosaleajinkya2205@gmail.com</span>
+                        </div>
+                        <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ajinkyainfosec" target="_blank" class="contact-item">
                         <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                             </svg>
                         </div>
-                        <h4>Phone</h4>
-                        <a href="tel:+910000000000">+91 0000000000</a>
-                    </div>
-
-                    <div class="contact-card">
+                        <div class="contact-detail">
+                            <span class="contact-type">GitHub</span>
+                            <span class="contact-val">github.com/ajinkyainfosec</span>
+                        </div>
+                        <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ajinkya--bhosale" target="_blank" class="contact-item">
                         <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                <circle cx="12" cy="10" r="3" />
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                         </div>
-                        <h4>Location</h4>
-                        <p>Pune, Maharashtra, India</p>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <h3>Find Me Online</h3>
-                    <div class="social-grid">
-                        <a href="https://github.com/Ajinkyainfosec" target="_blank" class="social-card">
+                        <div class="contact-detail">
+                            <span class="contact-type">LinkedIn</span>
+                            <span class="contact-val">linkedin.com/in/ajinkya--bhosale</span>
+                        </div>
+                        <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </a>
+                    <a href="https://tryhackme.com/p/aj1nky0" target="_blank" class="contact-item">
+                        <div class="contact-icon thm-icon">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path
-                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                                    d="M10.705 0C8.465 0 6.545 1.61 6.13 3.81A4.006 4.006 0 003 7.705c0 2.21 1.79 4 4 4h.115L4.42 13.4a1.201 1.201 0 101.696 1.697l2.69-2.69v.298c0 2.21 1.79 4 4 4a4.005 4.005 0 003.895-3.13A3.973 3.973 0 0019.595 10h.406a4 4 0 100-8 3.97 3.97 0 00-1.596.33A4.496 4.496 0 0014.5 0h-.25c-.555 0-1.09.1-1.59.275A4.449 4.449 0 0010.704 0z" />
                             </svg>
-                            <span>GitHub</span>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/ajinkya--bhosale" target="_blank" class="social-card">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-                            </svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://x.com/Ajinkya_offical" target="_blank" class="social-card">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.514l-5.106-6.694-5.829 6.694h-3.328l7.691-8.793-8.162-10.707h6.614l4.888 6.469 5.596-6.469zM17.414 20.452h1.828L6.775 3.947H4.886l12.528 16.505z" />
-                            </svg>
-                            <span>X (Twitter)</span>
-                        </a>
-                    </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-type">TryHackMe</span>
+                            <span class="contact-val">tryhackme.com/p/aj1nky0</span>
+                        </div>
+                        <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Ajinkya Bhosale. All rights reserved.</p>
-                <p class="footer-tagline">Built with <span class="heart">♥</span> and code</p>
+            <div class="footer-inner">
+                <span class="footer-copy">© 2025 Ajinkya Bhosale · Pune, India</span>
+                <span class="footer-note">Built with HTML, CSS &amp; JavaScript</span>
             </div>
         </div>
     </footer>
 
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <line x1="18" y1="6" x2="6" y2="18" />
-                    <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-            </button>
-            <div class="modal-body" id="modalBody">
-                <!-- Dynamic content will be inserted here -->
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
